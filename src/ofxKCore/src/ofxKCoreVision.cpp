@@ -339,8 +339,8 @@ void ofxKCoreVision::_update(ofEventArgs &e){
         //
         if( kinect.isFrameNew() ) {
             
-            const float* depthRaw = kinect.getDistancePixels();
-            unsigned char * depthPixels = sourceImg.getPixels();
+			const float* depthRaw = kinect.getDistancePixels().getPixels(); //HC: modified 240827;
+            unsigned char * depthPixels = sourceImg.getPixels().getPixels(); //HC: modified 240827;
             
             int numPixels = camWidth * camHeight;
             

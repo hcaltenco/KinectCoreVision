@@ -1,12 +1,14 @@
 #include "ofMain.h"
 #include "testApp.h"
-#include "ofAppGlutWindow.h"
+//#include "ofAppGlutWindow.h"
 
 //========================================================================
 int main(int argc, char *argv[])
 {
-    ofAppGlutWindow window;
-	ofSetupOpenGL(&window, 900, 900, OF_WINDOW);			// <-------- setup the GL context
+    //ofAppGlutWindow window;
+	ofSetupOpenGL(900, 900, OF_WINDOW); // HC: removed GLUT as recommended:
+										// https://github.com/patriciogonzalezvivo/ofxFX/issues/44
+										// otherwise get linker error
 
 	// this kicks off the running of my app
 	// can be OF_WINDOW or OF_FULLSCREEN

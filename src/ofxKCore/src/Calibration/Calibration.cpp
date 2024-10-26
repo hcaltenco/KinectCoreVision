@@ -149,7 +149,7 @@ void Calibration::drawCalibrationBlobs()
         //Draw Fuzzy Circles
         ofEnableAlphaBlending();
         ofImage tempCalibrationParticle;
-        tempCalibrationParticle.clone(calibrationParticle);
+        tempCalibrationParticle.operator=(calibrationParticle);
         ofSetColor(drawBlob.color);
         tempCalibrationParticle.draw(drawBlob.centroid.x * ofGetWidth() - drawBlob.boundingRect.width * .5, 
 									 drawBlob.centroid.y * ofGetHeight() - drawBlob.boundingRect.height * .5,
